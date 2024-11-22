@@ -1,0 +1,21 @@
+No conditions
+-------------
+* Arithmetic functions
+* Triangular number (equation)
+
+Conditions (if-else)
+--------------------
+???
+
+Loops
+-----
+* Factorial
+* Triangular number (loop)
+* Fibonacci
+
+Memory
+------
+* Sum
+* Average
+* Count
+* Filter

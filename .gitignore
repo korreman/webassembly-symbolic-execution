@@ -1,0 +1,13 @@
+*.o
+*.hi
+*.log
+*.aux
+*.toc
+*.wasm
+report/*.aux
+report/*.toc
+report/*.log
+report/*.out
+report/*.pdf
+report/*.bbl
+report/*.blg

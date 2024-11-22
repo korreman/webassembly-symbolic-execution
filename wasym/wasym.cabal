@@ -1,0 +1,91 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 654627eb7f7b4a1ddc64685f15b677ce9fcebd3d4fb6c7d8bfb7e8f96d258150
+
+name:           wasym
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/wasym#readme>
+homepage:       https://github.com/githubuser/wasym#readme
+bug-reports:    https://github.com/githubuser/wasym/issues
+author:         Troels Korreman Nielsen
+maintainer:     troels.korreman@gmail.com
+copyright:      2020 Troels Korreman Nielsen
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/wasym
+
+library
+  exposed-modules:
+      Assertions
+      AST
+      Exec
+      Machine
+      ParserInstr
+      ParserWASM
+      Search
+      SValue
+  other-modules:
+      Paths_wasym
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , cereal >=0.5.8.1
+    , megaparsec >=8.0.0
+    , mtl >=2.2.2
+    , sbv
+    , text >=1.2.4.0
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+  default-language: Haskell2010
+
+executable wasym-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_wasym
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , cereal >=0.5.8.1
+    , megaparsec >=8.0.0
+    , mtl >=2.2.2
+    , sbv
+    , text >=1.2.4.0
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+    , wasym
+  default-language: Haskell2010
+
+test-suite wasym-test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  other-modules:
+      Paths_wasym
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , cereal >=0.5.8.1
+    , megaparsec >=8.0.0
+    , mtl >=2.2.2
+    , sbv
+    , text >=1.2.4.0
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+    , wasym
+  default-language: Haskell2010
